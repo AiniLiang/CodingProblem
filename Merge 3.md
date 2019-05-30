@@ -1,5 +1,6 @@
 //Q1: Merge two sorted arrays
-public static void merge(int A[], int m, int B[], int n) {
+
+	public static void merge(int A[], int m, int B[], int n) {
 		while (m > 0 & n > 0) {
 			if (A[m - 1] > B[n - 1]) {
 				A[m + n - 1] = A[m - 1];
@@ -11,17 +12,16 @@ public static void merge(int A[], int m, int B[], int n) {
 		}
 	}
   
-  
-  
  //Q2:Merge two sorted Lists
- public class ListNode {
+ 
+ 	public class ListNode {
 		int val;
 		ListNode next;
 		ListNode(int x) {
 			val = x;
 		}
 	}
- public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+ 	public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 		if (l1 == null) return l2;
         if (l2 == null) return l1;
 		ListNode result = new ListNode(0);
