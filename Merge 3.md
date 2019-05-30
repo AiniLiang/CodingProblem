@@ -12,22 +12,20 @@ public static void merge(int A[], int m, int B[], int n) {
 	}
   
   
-  public class ListNode {
+  
+ //Q2:Merge two sorted Lists
+ public class ListNode {
 		int val;
 		ListNode next;
-
 		ListNode(int x) {
 			val = x;
 		}
 	}
- //Q2:Merge two sorted Lists
- public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-		if(l1==null) return l2;
-    if(l2==null) return l1;
-    
+ public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+		if (l1 == null) return l2;
+        if (l2 == null) return l1;
 		ListNode result = new ListNode(0);
 		ListNode prev = result;
-
 		while (l1 != null && l2 != null) {
 			if (l1.val < l2.val) {
 				prev.next = l1;
@@ -40,11 +38,12 @@ public static void merge(int A[], int m, int B[], int n) {
 		}
 		return result.next;
 	}
+	
  //Q3:Merge k sorted Lists
+ 
      public ListNode mergeKLists(ListNode[] lists) {
         return sort(lists, 0, lists.length - 1);
     }
-    
     private ListNode sort(ListNode[] lists, int lo, int hi) {
         if (lo >= hi) return lists[lo];
         int mid = lo + (hi - lo) / 2;
